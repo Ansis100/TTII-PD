@@ -17,6 +17,7 @@ Divu tipu lietotāji:
  - Vai nepieciešama iespēja "atbildēt" uz atsauksmi vai marķēt to kā "atrisinātu"? Līdzīgi kā https://sudzibas.lv
  - Vai izstrādāsim kaut kādu verificēšanu par datu autentiskumu? Ja jā, tad kā?
  - Atvieglojam darbu ar Bootstrap/Jebko citu?
+ - Vai datubāzes glabājas kā faili, kurus var commitot, vai tādas lietas (ar php artisan, composer utt.) jādara pa taisno servera vidē? Respektīvi, vai eksistē faili, kuri atrodas citur, kā projekta mapē?
 
 ### Darba sadale
 Pierakstamies katrs, pie lietām, ko gribam darīt.
