@@ -26,5 +26,4 @@ Darbu var sadalīt vai nu pa kontrolieriem un skatiem vai, lai ir vienlīdzīgs 
  - Kontrolieri un takas (varam taisīt katrs savu kontrolieri un attiecīgi pievienot nepieciešamās takas)
 #### Anna:
 #### Ansis:
- - Datubāzes loģiskā un fiziskā modeļa sagatavošana, ievietošana Laravel
 #### Artūrs:
