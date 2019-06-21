@@ -80,7 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     <?php 
-                    $results = DB::select('select * from iziretaji', array(1));
+                    $results = DB::select('select * from iziretajs', array(1));
                     echo print_r($results,true);
                     ?>
                 </div>
