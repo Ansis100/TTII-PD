@@ -79,7 +79,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <?php 
+                  Home page
+                    <?php
                     $results = DB::select('select * from iziretaji', array(1));
                     echo print_r($results,true);
                     ?>
