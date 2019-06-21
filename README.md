@@ -28,5 +28,6 @@ Darbu var sadalīt vai nu pa kontrolieriem un skatiem vai, lai ir vienlīdzīgs 
 #### Ansis:
 - ~Izveidot servera vidi un datubāzes attālināto pieslēgumu~
 #### Artūrs:
+(Hello! It is I!)
 - Skatu veidošana (HTML)
 - Skatu stilizēšana (CSS)
