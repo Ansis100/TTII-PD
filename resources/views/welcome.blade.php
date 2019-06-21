@@ -16,7 +16,7 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-weight: 600;
                 height: 100vh;
                 margin: 0;
             }
@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 16px;
             }
 
             .links > a {
@@ -79,7 +79,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <?php 
+                    $results = DB::select('select * from iziretaji', array(1));
+                    echo print_r($results,true);
+                    ?>
                 </div>
 
                 <div class="links">
