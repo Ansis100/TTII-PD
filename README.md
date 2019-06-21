@@ -27,10 +27,6 @@ Darbu var sadalīt vai nu pa kontrolieriem un skatiem vai, lai ir vienlīdzīgs 
  - Kontrolieri un takas (varam taisīt katrs savu kontrolieri un attiecīgi pievienot nepieciešamās takas)
 #### Anna:
 #### Ansis:
-<<<<<<< HEAD
-#### Artūrs:
->>>>>>> parent of b9dd894... Update README.md
-=======
 - ~Izveidot servera vidi un datubāzes attālināto pieslēgumu~
 #### Artūrs:
 - Skatu veidošana (HTML)
