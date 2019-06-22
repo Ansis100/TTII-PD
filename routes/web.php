@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'TestController@test');
+Route::get('/', 'ApartmentController@returnAllApartments');

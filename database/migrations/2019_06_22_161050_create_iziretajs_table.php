@@ -18,7 +18,6 @@ class CreateIziretajsTable extends Migration
             $table->timestamps();
             $table->string('first_name');
             $table->string('city');
-            $table->string('street');
             $table->string('phone');
             $table->string('email');
         });
