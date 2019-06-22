@@ -33,6 +33,8 @@ class CreateDzivoklisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('irets');
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('dzivoklis');
+        Schema::enableForeignKeyConstraints();
     }
 }
