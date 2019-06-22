@@ -27,6 +27,6 @@ Darbu var sadalīt vai nu pa kontrolieriem un skatiem vai, lai ir vienlīdzīgs 
 #### Anna:
 #### Ansis:
 - ~Izveidot servera vidi un datubāzes attālināto pieslēgumu~
-#### Artūrs:
+#### Artūrs(Me):
 - Skatu veidošana (HTML)
 - Skatu stilizēšana (CSS)
