@@ -22,6 +22,7 @@ class CreateDzivoklisTable extends Migration
             $table->integer('floor');
             $table->unsignedInteger('apartment_no');
             $table->unsignedInteger('rooms');
+            $table->text('description');
             $table->foreign('iziretajs_id')->references('id')->on('iziretajs');
         });
     }
