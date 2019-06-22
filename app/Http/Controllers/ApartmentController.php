@@ -9,6 +9,6 @@ class ApartmentController extends Controller
 {
     public function returnAllApartments () {
         $apartments=Apartment::all();
-	    return view('welcome',['apartments'=>$apartments]);
+	    return view('home',['apartments'=>$apartments]);
     }
 }
