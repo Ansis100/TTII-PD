@@ -13,7 +13,7 @@ class CreateDzivoklisTable extends Migration
      */
     public function up()
     {
-        Schema::create('irets', function (Blueprint $table) {
+        Schema::create('dzivoklis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->unsignedBigInteger('iziretajs_id');
