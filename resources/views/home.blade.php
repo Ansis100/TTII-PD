@@ -9,9 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-        <style>
-            * {font-family: 'Roboto', Helvetica, sans-serif; font-size: 20px;}
-        </style>
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div>
