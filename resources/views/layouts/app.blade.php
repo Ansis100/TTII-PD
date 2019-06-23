@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name') }}</title>
+    <title>FAF</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
     <div id="app">
         <!--NavBar v Registration & LogIn-->
         <div id="PageTop" class="header">
-            <a href="/" class="logo">{{ config('app.name') }}</a>
+            <a href="/" class="logo">Find-A-Flat</a>
             <div class="header-right">
                 <a class="active" href="/">Home</a>
                 <!-- Authentication Links -->
