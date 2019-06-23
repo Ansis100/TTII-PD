@@ -9,9 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-        <style>
-            * {font-family: 'Roboto', Helvetica, sans-serif; font-size: 20px;}
-        </style>
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div>
@@ -25,16 +23,38 @@
                     @endauth
                 </div>
             @endif -->
-            <div class="content">
-                <h1>Dzīvokļi:</h1>
-                    @foreach ($apartments as $apartment)
-                    <p>Pilsēta: {{$apartment->city}}</p>
-                    <p>Stāvs: {{$apartment->floor}}. stāvs</p>
-                    <p>Dzīvokļa numurs: {{$apartment->apartment_no}}</p>
-                    <p>Apraksts: {{$apartment->description}}</p>
-                    <hr>
-                    @endforeach
+            <!--NavBar v Registration & LogIn-->
+            <div id="PageTop" class="header">
+              <a href="#default" class="logo">FindApartment corporation</a>
+              <div class="header-right">
+                <a class="active" href="#home">Home</a>
+                <a href="register">Register</a>
+                <a href="login">Log In</a>
+              </div>
             </div>
+            <div class = "RightButton">
+			        <button class="ToTop_BTN"><a href="#PageTop">To Top</a></button>
+		        </div>
+
+            <div id="Table">
+              <table class="MainPageTable">
+                <tr>
+                  <td>
+                    <div class="content">
+                      <h1>Dzīvokļi:</h1>
+                        @foreach ($apartments as $apartment)
+                        <p>Pilsēta: {{$apartment->city}}</p>
+                        <p>Stāvs: {{$apartment->floor}}. stāvs</p>
+                        <p>Dzīvokļa numurs: {{$apartment->apartment_no}}</p>
+                        <p>Apraksts: {{$apartment->description}}</p>
+                        <hr>
+                        @endforeach
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
         </div>
     </body>
 </html>
