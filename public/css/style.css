@@ -1,8 +1,11 @@
-* {font-family: 'Roboto', Helvetica, sans-serif; font-size: 20px;}
+* {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 20px;
+}
 
 body{
   background-color: #DAFFFE;
-  background-image: url("/images/ForSalePic.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/ForSalePic.png");
   background-repeat: round;
 }
 /* Style the header with a grey background and some padding */
@@ -76,7 +79,7 @@ body{
   table
 	{
     margin: 0 auto 0 auto;
-		background-color:white;
+		background-color: white;
 		text-align:left;
     border: solid;
     border-color: #00C5ED;
