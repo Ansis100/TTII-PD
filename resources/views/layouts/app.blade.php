@@ -43,9 +43,7 @@
         <div class="RightButton">
             <button class="ToTop_BTN"><a href="#PageTop">To Top</a></button>
         </div>
-    </div>
-
-    @yield('content')
+        @yield('content')
     </div>
 
     <!-- Scripts -->
