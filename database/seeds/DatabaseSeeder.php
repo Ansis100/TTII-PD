@@ -44,5 +44,17 @@ class DatabaseSeeder extends Seeder
             'rooms' => 1,
             'description' => 'Nu reāla čuhņa.',
         ]);
+        DB::table('users')->insert([
+            'name' => 'Ansis',
+            'email' => 'ansis@ansis.lv',
+            'type' => 'iziretajs',
+            'password' => bcrypt('Passw0rd!'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Artūrs',
+            'email' => 'arturs@arturs.lv',
+            'type' => 'iretajs',
+            'password' => bcrypt('Passw0rd!'),
+        ]);
     }
 }

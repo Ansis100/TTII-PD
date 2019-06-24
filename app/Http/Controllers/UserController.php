@@ -10,12 +10,18 @@ class UserController extends Controller
 {
     public function profile()
     {
-        if (Auth::user()->type == 'iretajs') {
-            $user = User::where('email', Auth::user()->email)->get();
+        $user = User::where('email', Auth::user()->email)->get();
+        if ($user == null) {
+            return redirect()->route('register-profile');
+        } else if (Auth::user()->type == 'iretajs') {
             return view('profile', ['user' => $user->first()]);
         } else {
-            $user = User::where('email', Auth::user()->email)->get();
             return view('profile', ['user' => $user->first()]);
         }
+    }
+
+    public function register()
+    {
+        return view('register-profile');
     }
 }

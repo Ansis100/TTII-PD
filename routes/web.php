@@ -16,3 +16,4 @@ Route::get('/', 'ApartmentController@returnAllApartments')->name('home');
 Auth::routes();
 
 Route::get('/user', 'UserController@profile')->name('user');
+Route::get('/user/{id}', 'UserController@register')->name('register-profile');
