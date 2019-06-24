@@ -17,6 +17,11 @@ class DatabaseSeeder extends Seeder
             'phone' => '28163814',
             'email' => 'ansis@ansis.lv',
         ]);
+        DB::table('iretajs')->insert([
+            'first_name' => 'Arturs',
+            'phone' => '28163814',
+            'email' => 'arturs@arturs.lv',
+        ]);
         DB::table('dzivoklis')->insert([
             'iziretajs_id' => 1,
             'city' => 'Rīga',
@@ -55,6 +60,18 @@ class DatabaseSeeder extends Seeder
             'email' => 'arturs@arturs.lv',
             'type' => 'iretajs',
             'password' => bcrypt('Passw0rd!'),
+        ]);
+        DB::table('atsauksme')->insert([
+            'dzivoklis_id' => 1,
+            'iretajs_id' => 1,
+            'review' => 'Ahhhhhhhhhhhhhhhhhh es gandrīz nomiru.',
+            'rating' => 1,
+        ]);
+        DB::table('atsauksme')->insert([
+            'iretajs_id' => 1,
+            'dzivoklis_id' => 2,
+            'review' => 'Bija ok',
+            'rating' => 3,
         ]);
     }
 }
