@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'ApartmentController@returnAllApartments');
+Route::get('/', 'ApartmentController@returnAllApartments')->name('home');
+
+Auth::routes();
+
+Route::get('/user', 'UserController@profile')->name('user');
