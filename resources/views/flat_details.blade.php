@@ -37,4 +37,17 @@
     <h3>Atsauksmes:</h3>
     <span>Test span</span>
 </div>
+<br>
+<div>
+    <form method="POST" action="">
+        <div>
+            <textarea name="body" placeholder="Kāda ir Jūsu atsauksme?"></textarea>
+        </div>
+        <div>
+            <button type="submit">Pievienot atsauksmi</button>
+        </div>
+    </form>
+</div>
+<br>
+
 @endsection
