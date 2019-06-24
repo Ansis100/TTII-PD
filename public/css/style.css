@@ -37,10 +37,12 @@ body {
   color: black;
 }
 /* Style the active/current link*/
+/*
 .header a.active {
   background-color: white;
   color: black;
 }
+*/
 /* Float the link section to the right */
 .header-right {
   float: right;
@@ -88,3 +90,16 @@ body {
     border-color: #00C5ED;
     width: 72%;
 	}
+  form{
+    margin: 0 auto 0 auto;
+		text-align:center;
+    width: 40%;
+  }
+  legend{
+    border: solid;
+    background-color: white;
+  }
+  fieldset{
+    background-color: white;
+    line-height: 2;
+}
