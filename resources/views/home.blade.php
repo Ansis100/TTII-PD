@@ -1,21 +1,20 @@
 @extends('layouts.app')
 @section('content')
-<div id="Table">
-    <table class="MainPageTable">
-        <tr>
-            <td>
-                <div class="content">
-                    <h1>Dzīvokļi:</h1>
-                    @foreach ($apartments as $apartment)
-                    <p>Pilsēta: {{$apartment->city}}</p>
-                    <p>Stāvs: {{$apartment->floor}}. stāvs</p>
-                    <p>Dzīvokļa numurs: {{$apartment->apartment_no}}</p>
-                    <p>Apraksts: {{$apartment->description}}</p>
-                    <hr>
-                    @endforeach
-                </div>
-            </td>
-        </tr>
-    </table>
+<div class="main">
+    @foreach ($apartments as $apartment)
+    <section>
+        <h2>
+            <a href="flat/{{$apartment->id}}">
+                <b>
+                    Dzīvokļa adrese: {{$apartment->street}}, {{$apartment->city}}
+                </b>
+            </a>
+        </h2>
+        <p class="flat-description">
+            <img src="{{ URL::to('/images/no-image-icon.png') }}" alt="flat-img"> 
+            Apraksts: {{$apartment->description}}
+        </p>
+    </section>
+    @endforeach
 </div>
 @endsection

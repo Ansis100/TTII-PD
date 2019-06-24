@@ -82,27 +82,88 @@ body {
     border: solid;
   }
 /*Table style*/
-  table
-	{
+  table:not(#info-table) {
     margin: 0 auto 0 auto;
-		background-color: white;
-		text-align:left;
+    background-color: white;
+    text-align:left;
     border: solid;
     border-color: #00C5ED;
     width: 72%;
-	}
-  form{
-    margin: 0 auto 0 auto;
-		text-align:center;
-    width: 40%;
-  }
-  legend{
+}
+form {
+  margin: 0 auto 0 auto;
+              text-align:center;
+  width: 40%;
+}
+legend {
+  border: solid;
+  background-color: white;
+}
+fieldset {
+  background-color: white;
+  line-height: 2;
+}
+
+section, .details {
+    margin: 10px auto 10px auto;
+    padding: 15px 10px;
+    background-color: white;
+    text-align:left;
     border: solid;
-    background-color: white;
-  }
-  fieldset{
-    background-color: white;
-    line-height: 2;
+    border-color: #00C5ED;
+    width: 72%;
+    border-radius: 4px;
+}
+
+.flat-description img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 100px;
+    float: left; 
+    margin: 0px 15px 0px 15px;
+}
+
+.flat-description {
+    overflow: auto;
+}
+
+section h2 {
+    padding-left: 25px;
+}
+
+section h2 a {
+    text-decoration: none;
+    color: navy;
+}
+
+.main {
+    padding-bottom: 30px;
+}
+
+#info-table td:first-child {
+    color: #f39c12;
+    font-weight: bold;
+    width: 35%;
+}
+
+#info-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+aside {
+    width: 40%;
+    float: left;
+    margin: 20px;
+}
+
+aside > img {
+    width: 100%;
+}
+
+.details {
+    overflow: auto;
 }
   div a:hover{
   background-color: white;
