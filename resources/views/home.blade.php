@@ -32,7 +32,7 @@
                 <a href="login">Log In</a>
               </div>
             </div>
-            <div class = "RightButton">
+            <div class = "TopButton">
 			        <button class="ToTop_BTN"><a href="#PageTop">To Top</a></button>
 		        </div>
 
