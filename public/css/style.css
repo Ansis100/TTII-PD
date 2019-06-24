@@ -2,7 +2,8 @@
 
 body{
   background-color: #DAFFFE;
-  background-image: url("GitHub\TTII-PD\public\Images\ForSalePic.png");
+  background-image: url("/images/ForSalePic.png");
+  background-repeat: round;
 }
 /* Style the header with a grey background and some padding */
 .header {
