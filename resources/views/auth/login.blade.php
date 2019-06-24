@@ -5,14 +5,14 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-              <form>
-                <fieldset>
-                  <legend>
-                <div class="panel-heading">Login</div>
-                  </legend>
+
                 <div class="panel-body">
                   <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
+                    <fieldset>
+                      <legend>
+                    <div class="panel-heading">Login</div>
+                      </legend>
                       <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                         <label for="email" class="col-md-4 control-label">E-Mail Address</label>
                             <div class="col-md-6">
@@ -54,10 +54,9 @@
                               </a>
                           </div>
                         </div>
-                     </form>
-                   </div>
-                   </fieldset>
-                </form>
+                      </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

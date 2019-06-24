@@ -1,5 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<p>{{ $user->name }}</p>
-<p>{{ $user->type }}</p>
+
+<table id="profile">
+  <tr>
+    <td>
+      <p>{{ $user->name }}</p>
+      <p>{{ $user->type }}</p>
+    </td>
+  </tr>
+</table>
+
 @endsection

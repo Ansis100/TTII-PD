@@ -79,6 +79,7 @@ body {
   .btn{
     background-color: #00C5ED;
     color: white;
+    border: solid;
   }
 /*Table style*/
   table
@@ -102,4 +103,8 @@ body {
   fieldset{
     background-color: white;
     line-height: 2;
+}
+  div a:hover{
+  background-color: white;
+  color: black;
 }

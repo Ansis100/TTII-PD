@@ -6,15 +6,14 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
 
-              <form>
-                <fieldset>
-                  <legend>
-                    <div class="panel-heading">Register</div>
-                  </legend>
+
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-
+                        <fieldset>
+                          <legend>
+                            <div class="panel-heading">Register</div>
+                          </legend>
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="control-label">Name</label>
 
@@ -88,9 +87,9 @@
                                     </button>
                                 </div>
                             </div>
-                </div>
-              </fieldset>
-            </form>
+                          </fieldset>
+                        </form>
+                      </div>
             </div>
         </div>
     </div>
