@@ -32,10 +32,10 @@
                 <a href="login">Log In</a>
               </div>
             </div>
-            <div class = "TopButton">
-			        <button class="ToTop_BTN"><a href="#PageTop">To Top</a></button>
+            <div class = "top_button">
+			        <button class="to_top_btn"><a href="#PageTop">To Top</a></button>
 		        </div>
-
+            <!--Table for everything else-->
             <div id="Table">
               <table class="MainPageTable">
                 <tr>
