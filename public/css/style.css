@@ -56,31 +56,35 @@ body {
     float: none;
   }
 }
-/*-----Press BTN to come to the top of the page (needs fixing with text)*/
-.TopButton {
-  height: 40px;
-  width: 80px;
-  margin: 0px;
-  overflow: hidden;
-  position: fixed;
-}
-.ToTop_BTN {
-  background-color: #00c5ed;
-  width: 100%;
-  height: 100%;
-}
-.TopButton :hover {
-  background-color: white;
-  color: black;
-}
-.BTN {
-}
+/*-----Press BTN to come to the top of the page (needs fixing with underlined text)*/
+.top_button{
+		height:40px;
+		width:80px;
+		margin: 0px;
+		overflow: hidden;
+		position: fixed;
+	}
+  .to_top_btn{
+    background-color: #00C5ED;
+    width: 100%;
+    height: 100%;
+  }
+  .top_button :hover{
+    background-color: white;
+    color: black;
+  }
+  /*button style*/
+  .btn{
+    background-color: #00C5ED;
+    color: white;
+  }
 /*Table style*/
-table {
-  margin: 0 auto 0 auto;
-  background-color: white;
-  text-align: left;
-  border: solid;
-  border-color: #00c5ed;
-  width: 70%;
-}
+  table
+	{
+    margin: 0 auto 0 auto;
+		background-color: white;
+		text-align:left;
+    border: solid;
+    border-color: #00C5ED;
+    width: 72%;
+	}
