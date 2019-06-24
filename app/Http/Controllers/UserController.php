@@ -19,9 +19,4 @@ class UserController extends Controller
             return view('profile', ['user' => $user->first()]);
         }
     }
-
-    public function register()
-    {
-        return view('register-profile');
-    }
 }
