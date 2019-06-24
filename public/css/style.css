@@ -5,8 +5,8 @@
 
 body {
   background-color: #dafffe;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("/images/ForSalePic.png");
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/images/ForSalePic.png"); */
   background-repeat: round;
 }
 /* Style the header with a grey background and some padding */
