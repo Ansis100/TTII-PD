@@ -12,4 +12,10 @@ class ApartmentController extends Controller
         $apartments = Apartment::all();
         return view('home', ['apartments' => $apartments]);
     }
+    
+    public function showApartmentDetails($id) 
+    {
+        $apartment = Apartment::all()->where('id', $id)->first();
+        return view('flat_details', ['flat' => $apartment]);
+    }
 }
