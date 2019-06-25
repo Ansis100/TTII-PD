@@ -1,23 +1,25 @@
 @extends('layouts.app')
 @section('content')
-<form>
-  <fieldset>
-    @if ($user->type == 'iretajs')
+@if ($user->type == 'iretajs')
+<section>
     <h1>Īrnieka {{ $data->first_name }} profila lapa</h1>
     <h3>Informācija: </h3>
     <p>{{ $data->first_name }}</p>
     <p>{{ $data->email }}</p>
     <p>{{ $data->phone }}</p>
-    @else
-    @if ($isCurrentUser)
-    <a href="/apartment/new">Pievienot jaunu dzīvokli</a>
-    @endif
+</section>
+@else
+@if ($isCurrentUser)
+<a href="/apartment/new">Pievienot jaunu dzīvokli</a>
+@endif
+<section>
     <h1>{{ $isCurrentUser ? 'Mans' : 'Izīrētāja ' . $data->first_name }} profils</h1>
     <h3>{{ $isCurrentUser ? 'Mani dati:' : 'Izīrētāja dati' }} </h3>
     <p>{{ $data->first_name }}</p>
     <p>{{ $data->email }}</p>
     <p>{{ $data->phone }}</p>
-    <hr>
+</section>
+<section>
     <h3>Atsauksmes:</h3>
     @foreach ($reviews as $review)
     <p>Atsauksme par dzīvokli <a href="/apartment/{{ $review->apartmentID }}">{{ $review->street }}</a></p>
@@ -25,7 +27,6 @@
     <p>Atsauksmi rakstīja: <a href="/user/{{ $review->userID }}">{{ $review->first_name }}</a></p>
     <hr>
     @endforeach
-    @endif
-  </fieldset>
-</form>
+</section>
+@endif
 @endsection

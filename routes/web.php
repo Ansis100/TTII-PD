@@ -13,14 +13,22 @@
 
 Route::get('/', 'ApartmentController@returnAllApartments')->name('home');
 
-Route::get('/apartment/new', 'ApartmentController@new');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/apartment/new', 'ApartmentController@new');
 
-Route::post('/apartment/new', 'ApartmentController@store');
+    Route::post('/apartment/new', 'ApartmentController@store');
 
-Route::get('/apartment/{id}', 'ApartmentController@apartment');
+    Route::post('/apartment/{id}', 'ApartmentController@newReview');
 
-Route::get('/user/{id}', 'UserController@profile');
+    Route::get('/apartment/{id}', 'ApartmentController@apartment');
 
-Route::post('/user', 'UserController@update')->name('update-user');
+    Route::get('/user/{id}', 'UserController@profile');
+
+    Route::get('/apartment/{id}/delete/{id2}', 'ReviewController@destroy');
+
+    Route::get('/apartment/{id}/update/{id2}', 'ReviewController@change');
+
+    Route::post('/apartment/{id}/update/{id2}', 'ReviewController@update');
+});
 
 Auth::routes();
