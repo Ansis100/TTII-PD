@@ -17,6 +17,6 @@ Route::get('/apartment/{id}', 'ApartmentController@apartment');
 
 Auth::routes();
 
-Route::get('/user', 'UserController@profile')->name('user');
+Route::get('/user/{id}', 'UserController@profile');
 
-Route::get('/user/{id}', 'UserController@register')->name('register-profile');
+Route::post('/user', 'UserController@update')->name('update-user');

@@ -17,6 +17,22 @@ class DatabaseSeeder extends Seeder
             'phone' => '28163814',
             'email' => 'ansis@ansis.lv',
         ]);
+        DB::table('iziretajs')->insert([
+            'first_name' => 'Jānis',
+            'city' => 'Rīga',
+            'phone' => '28166719',
+            'email' => 'janis@janis.lv',
+        ]);
+        DB::table('iretajs')->insert([
+            'first_name' => 'Arturs',
+            'phone' => '28163814',
+            'email' => 'arturs@arturs.lv',
+        ]);
+        DB::table('iretajs')->insert([
+            'first_name' => 'Anna',
+            'phone' => '26423425',
+            'email' => 'anna@anna.lv',
+        ]);
         DB::table('dzivoklis')->insert([
             'iziretajs_id' => 1,
             'city' => 'Rīga',
@@ -44,6 +60,15 @@ class DatabaseSeeder extends Seeder
             'rooms' => 1,
             'description' => 'Nu reāla čuhņa.',
         ]);
+        DB::table('dzivoklis')->insert([
+            'iziretajs_id' => 2,
+            'city' => 'Rīga',
+            'street' => 'Krišjāņa Barona 57',
+            'floor' => 2,
+            'apartment_no' => 17,
+            'rooms' => 2,
+            'description' => 'Normāls dzīvoklis.',
+        ]);
         DB::table('users')->insert([
             'name' => 'Ansis',
             'email' => 'ansis@ansis.lv',
@@ -55,6 +80,36 @@ class DatabaseSeeder extends Seeder
             'email' => 'arturs@arturs.lv',
             'type' => 'iretajs',
             'password' => bcrypt('Passw0rd!'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Anna',
+            'email' => 'anna@anna.lv',
+            'type' => 'iretajs',
+            'password' => bcrypt('Passw0rd!'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Jānis',
+            'email' => 'janis@janis.lv',
+            'type' => 'iziretajs',
+            'password' => bcrypt('Passw0rd!'),
+        ]);
+        DB::table('atsauksme')->insert([
+            'dzivoklis_id' => 1,
+            'iretajs_id' => 1,
+            'review' => 'Ahhhhhhhhhhhhhhhhhh es gandrīz nomiru.',
+            'rating' => 1,
+        ]);
+        DB::table('atsauksme')->insert([
+            'iretajs_id' => 2,
+            'dzivoklis_id' => 2,
+            'review' => 'Bija ok',
+            'rating' => 3,
+        ]);
+        DB::table('atsauksme')->insert([
+            'iretajs_id' => 1,
+            'dzivoklis_id' => 4,
+            'review' => 'Baaaaaaaaigi nice.',
+            'rating' => 5,
         ]);
     }
 }
