@@ -47,13 +47,15 @@
 </div>
 <div class="review details">
     <h3>Atsauksmes:</h3>
+    <hr>
     @foreach ($reviews as $review)
     <h4><a href="/user/{{ $review->userID }}">{{ $review->first_name }}</a></h4>
-    <p>{{ $review->rating }} punkti</p>
-    <p>{{ $review->review }}</p>
+    <p>Reitings: {{ $review->rating }} punkti</p>
+    <p class="review-text">{{ $review->review }}</p>
     @if ($review->userID == Auth::user()->id)
     <p><a href="/apartment/{{ $review->dzivoklis_id }}/update/{{ $review->id }}">Labot</a> | <a href="/apartment/{{ $review->dzivoklis_id }}/delete/{{ $review->id }}">Dzēst</a></p>
     @endif
+    <hr>
     @endforeach
 </div>
 <br>

@@ -19,11 +19,11 @@
     <p>{{ $data->email }}</p>
     <p>{{ $data->phone }}</p>
 </section>
-<section>
+<section class="review-section">
     <h3>Atsauksmes:</h3>
     @foreach ($reviews as $review)
-    <p>Atsauksme par dzīvokli <a href="/apartment/{{ $review->apartmentID }}">{{ $review->street }}</a></p>
-    <p>Atsauksme: {{ $review->review }}</p>
+    <h5>Atsauksme par dzīvokli <a href="/apartment/{{ $review->apartmentID }}">{{ $review->street }}</a></h5>
+    <p class="review-text">{{ $review->review }}</p>
     <p>Atsauksmi rakstīja: <a href="/user/{{ $review->userID }}">{{ $review->first_name }}</a></p>
     <hr>
     @endforeach

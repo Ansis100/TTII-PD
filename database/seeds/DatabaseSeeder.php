@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
             'floor' => 3,
             'apartment_no' => 17,
             'rooms' => 2,
-            'description' => 'Basically šķūnis.',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend mi quis metus ornare imperdiet. Praesent a lacinia velit. Pellentesque nec malesuada sapien. Quisque tincidunt non dolor ut luctus. Vestibulum at malesuada mi. Mauris venenatis tortor a vulputate bibendum. Etiam dapibus ut purus et dignissim. Nunc id commodo nunc. Ut a sem eu dui pulvinar semper et sed magna. Etiam sodales auctor hendrerit. Nam molestie nec tortor quis interdum. Suspendisse a feugiat ante. ',
         ]);
         DB::table('dzivoklis')->insert([
             'iziretajs_id' => 1,
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
             'floor' => 1,
             'apartment_no' => 12,
             'rooms' => 1,
-            'description' => 'Nu reāla čuhņa.',
+            'description' => 'Sed auctor pulvinar massa, sit amet consequat ipsum mattis eget. Curabitur ullamcorper, risus maximus volutpat finibus, orci nulla porttitor urna, sit amet luctus arcu neque eget sapien. Nunc dapibus tempus lacus, in scelerisque elit vulputate non. In eu euismod tortor, ut eleifend neque. Cras consectetur dui quis nisi dictum viverra. Quisque porta semper augue, at tristique urna. Sed iaculis accumsan metus, at fringilla turpis porta ac. Nulla viverra consequat risus sed placerat. Phasellus mattis eros nec lectus aliquam faucibus. Vivamus quis nisi orci. ',
         ]);
         DB::table('dzivoklis')->insert([
             'iziretajs_id' => 2,
@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
             'floor' => 2,
             'apartment_no' => 17,
             'rooms' => 2,
-            'description' => 'Normāls dzīvoklis.',
+            'description' => 'Praesent nulla neque, pretium fringilla consectetur nec, viverra tristique odio. Vestibulum sem ex, pretium ac fringilla quis, aliquam vel justo. Suspendisse eu arcu nulla. Cras ultricies venenatis elit, vitae ultrices odio faucibus ut. Praesent congue sagittis sapien, id accumsan turpis tristique vitae. Praesent faucibus rutrum odio, a ornare ipsum auctor ac. Suspendisse quis lectus pharetra, condimentum nisi ac, sollicitudin justo. Sed ultricies risus eros, ac dapibus lectus efficitur consectetur. Integer volutpat, enim iaculis euismod vestibulum, arcu magna accumsan purus, sed porttitor purus justo sed metus. Nulla facilisi. Quisque tincidunt dolor in porttitor rhoncus. ',
         ]);
         DB::table('users')->insert([
             'name' => 'Ansis',

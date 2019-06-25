@@ -4,10 +4,8 @@
     @foreach ($apartments as $apartment)
     <section>
         <h2>
-            <a href="/apartment/{{$apartment->id}}">
-                <b>
-                    Dzīvokļa adrese: {{$apartment->street}}, {{$apartment->city}}
-                </b>
+            <a class="apartment-link" href="/apartment/{{$apartment->id}}">
+                Dzīvokļa adrese: {{$apartment->street}}, {{$apartment->city}}
             </a>
         </h2>
         <p class="flat-description">
