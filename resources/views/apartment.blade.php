@@ -49,14 +49,27 @@
     <h3>Atsauksmes:</h3>
     @foreach ($reviews as $review)
     <h4><a href="/user/{{ $review->userID }}">{{ $review->first_name }}</a></h4>
+    <p>{{ $review->rating }} punkti</p>
     <p>{{ $review->review }}</p>
+    @if ($review->userID == Auth::user()->id)
+    <p><a href="/apartment/{{ $review->dzivoklis_id }}/update/{{ $review->id }}">Labot</a> | <a href="/apartment/{{ $review->dzivoklis_id }}/delete/{{ $review->id }}">Dzēst</a></p>
+    @endif
     @endforeach
 </div>
 <br>
+@if ($isIretajs)
 <div>
-    <form method="POST" action="">
+    <form method="POST" action="/apartment/{{ $apartment->id }}">
+        {{ csrf_field() }}
         <div>
-            <textarea name="body" placeholder="Kāda ir Jūsu atsauksme?"></textarea>
+            <textarea name="review" placeholder="Kāda ir Jūsu atsauksme?"></textarea>
+            <select name="rating">
+                <option value="1">1 Punkts</option>
+                <option value="2">2 Punkti</option>
+                <option value="3">3 Punkti</option>
+                <option value="4">4 Punkti</option>
+                <option value="5">5 Punkti</option>
+            </select>
         </div>
         <div>
             <button type="submit">Pievienot atsauksmi</button>
@@ -65,4 +78,5 @@
 </div>
 <br>
 
+@endif
 @endsection
