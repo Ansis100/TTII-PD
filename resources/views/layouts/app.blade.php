@@ -27,7 +27,7 @@
                 <a href="{{ route('login') }}">Login</a>
                 <a href="{{ route('register') }}">Register</a>
                 @else
-                <a href="{{ route('user') }}">
+                <a href="/user/{{ Auth::user()->id }}">
                     <span>User: {{ Auth::user()->name }}</span>
                 </a>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();

@@ -17,8 +17,8 @@ class CreateIziretajsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('first_name');
-            $table->string('city');
-            $table->string('phone');
+            $table->string('city')->nullable();
+            $table->string('phone')->nullable();
             $table->string('email');
         });
     }
