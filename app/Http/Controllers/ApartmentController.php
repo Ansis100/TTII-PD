@@ -19,6 +19,6 @@ class ApartmentController extends Controller
             ->leftJoin('iziretajs', 'iziretajs_id', '=', 'iziretajs.id')
             ->leftJoin('users', 'iziretajs.email', '=', 'users.email')
             ->first();
-        return view('apartment', ['flat' => $apartment]);
+        return view('apartment', ['apartment' => $apartment]);
     }
 }
