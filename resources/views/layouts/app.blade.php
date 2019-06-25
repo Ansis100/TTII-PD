@@ -21,7 +21,7 @@
         <div id="PageTop" class="header">
             <a href="/" class="logo">Find-A-Flat</a>
             <div class="header-right">
-                <a class="active" href="/">Home</a>
+                <a class="active" href="/">Sākums</a>
                 <!-- Authentication Links -->
                 @guest
                 <a href="{{ route('login') }}">Ienākt</a>
