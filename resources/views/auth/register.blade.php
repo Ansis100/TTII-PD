@@ -5,7 +5,7 @@
     {{ csrf_field() }}
     <fieldset>
         <legend>
-            <div class="panel-heading">Reģistrēt Find-A-Flat Profilu</div>
+            Reģistrēt Find-A-Flat Profilu
         </legend>
 
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

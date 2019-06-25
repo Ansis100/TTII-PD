@@ -10,7 +10,7 @@
                         {{ csrf_field() }}
                         <fieldset>
                             <legend>
-                                <div class="panel-heading">Ienākt</div>
+                                Ienākt
                             </legend>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="col-md-4 control-label">E-pasta Adrese</label>

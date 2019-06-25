@@ -8,7 +8,7 @@
     <fieldset>
 
         <legend>
-            <div class="panel-heading">Jauns dzīvoklis</div>
+            Jauns dzīvoklis
         </legend>
 
         <div class="form-group row">

@@ -24,8 +24,8 @@
                 <a class="active" href="/">Home</a>
                 <!-- Authentication Links -->
                 @guest
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
+                <a href="{{ route('login') }}">Ienākt</a>
+                <a href="{{ route('register') }}">Reģistrēties</a>
                 @else
                 <a href="/user/{{ Auth::user()->id }}">
                     <span>User: {{ Auth::user()->name }}</span>
