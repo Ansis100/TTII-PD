@@ -13,10 +13,14 @@
 
 Route::get('/', 'ApartmentController@returnAllApartments')->name('home');
 
-Route::get('/apartment/{id}', 'ApartmentController@apartment');
+Route::get('/apartment/new', 'ApartmentController@new');
 
-Auth::routes();
+Route::post('/apartment/new', 'ApartmentController@store');
+
+Route::get('/apartment/{id}', 'ApartmentController@apartment');
 
 Route::get('/user/{id}', 'UserController@profile');
 
 Route::post('/user', 'UserController@update')->name('update-user');
+
+Auth::routes();

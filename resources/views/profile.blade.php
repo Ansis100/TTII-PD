@@ -7,8 +7,11 @@
 <p>{{ $data->email }}</p>
 <p>{{ $data->phone }}</p>
 @else
-<h1>Izīrētāja {{ $data->first_name }} profila lapa</h1>
-<h3>Tavi dati: </h3>
+@if ($isCurrentUser)
+<a href="/apartment/new">Pievienot jaunu dzīvokli</a>
+@endif
+<h1>{{ $isCurrentUser ? 'Mans' : 'Izīrētāja ' . $data->first_name }} profils</h1>
+<h3>{{ $isCurrentUser ? 'Mani dati:' : 'Izīrētāja dati' }} </h3>
 <p>{{ $data->first_name }}</p>
 <p>{{ $data->email }}</p>
 <p>{{ $data->phone }}</p>

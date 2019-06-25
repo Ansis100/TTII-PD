@@ -11,7 +11,7 @@
             </a>
         </h2>
         <p class="flat-description">
-            <img src="{{ URL::to('/images/no-image-icon.png') }}" alt="flat-img"> 
+            <img src="{{ URL::to('/images/no-image-icon.png') }}" alt="flat-img">
             Apraksts: {{$apartment->description}}
         </p>
     </section>

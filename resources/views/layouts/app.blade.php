@@ -40,14 +40,22 @@
                 @endguest
             </div>
         </div>
-        <div class="RightButton">
-            <button class="ToTop_BTN"><a href="#PageTop">To Top</a></button>
-        </div>
-        @yield('content')
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+                        <div class="panel-body">
+                            @yield('content')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}"></script>
+    </div>
 </body>
 
 </html>

@@ -15,9 +15,10 @@ class UserController extends Controller
     {
         $allUsers = User::all();
         $user = User::where('id', $userID)->get()->first();
+        $isCurrentUser = (Auth::user()->email == $user->email);
         if ($user->type == 'iretajs') {
             $userData = Iretajs::where('email', $user->email)->get()->first();
-            return view('profile', ['user' => $user, 'data' => $userData]);
+            return view('profile', ['user' => $user, 'data' => $userData, 'isCurrentUser' => $isCurrentUser]);
         } else if ($user->type == 'iziretajs') {
             $userData = Iziretajs::where('email', $user->email)->get()->first();
             $reviews = Apartment::select('iretajs.first_name', 'review', 'users.id as userID', 'street', 'dzivoklis.id as apartmentID')
@@ -26,7 +27,7 @@ class UserController extends Controller
                 ->leftJoin('iretajs', 'iretajs.id', '=', 'atsauksme.iretajs_id')
                 ->leftJoin('users', 'iretajs.email', '=', 'users.email')
                 ->get();
-            return view('profile', ['user' => $user, 'data' => $userData, 'reviews' => $reviews]);
+            return view('profile', ['user' => $user, 'data' => $userData, 'reviews' => $reviews, 'isCurrentUser' => $isCurrentUser]);
         }
     }
 }

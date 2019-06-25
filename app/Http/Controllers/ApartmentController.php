@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Apartment;
+use App\User;
+use Auth;
 
 class ApartmentController extends Controller
 {
@@ -26,5 +28,29 @@ class ApartmentController extends Controller
             ->leftJoin('users', 'iretajs.email', '=', 'users.email')
             ->get();
         return view('apartment', ['apartment' => $apartment, 'reviews' => $reviews]);
+    }
+
+    public function new()
+    {
+        $user = User::select('id', 'type')->where('email', Auth::user()->email)->first();
+        return view('new-apartment', ['user' => $user]);
+    }
+
+    public function store()
+    {
+        $user = User::select('id')->where('email', Auth::user()->email)->first();
+
+        $apartment = new Apartment;
+
+        $apartment->street = request('street');
+        $apartment->city = request('city');
+        $apartment->floor = request('floor');
+        $apartment->rooms = request('rooms');
+        $apartment->apartment_no = request('apartment_no');
+        $apartment->description = request('description');
+        $apartment->iziretajs_id = $user->id;
+        $apartment->save();
+        $apartment = Apartment::where('street', $apartment->street)->first();
+        return redirect('/apartment/' . $apartment->id);
     }
 }
