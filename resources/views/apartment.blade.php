@@ -47,7 +47,10 @@
 </div>
 <div class="review details">
     <h3>Atsauksmes:</h3>
-    <span>Test span</span>
+    @foreach ($reviews as $review)
+    <h4><a href="/user/{{ $review->userID }}">{{ $review->first_name }}</a></h4>
+    <p>{{ $review->review }}</p>
+    @endforeach
 </div>
 <br>
 <div>

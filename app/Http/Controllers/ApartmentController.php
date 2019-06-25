@@ -19,6 +19,12 @@ class ApartmentController extends Controller
             ->leftJoin('iziretajs', 'iziretajs_id', '=', 'iziretajs.id')
             ->leftJoin('users', 'iziretajs.email', '=', 'users.email')
             ->first();
-        return view('apartment', ['apartment' => $apartment]);
+        $reviews = Apartment::select('review', 'users.id as userID', 'first_name')
+            ->where('dzivoklis_id', $id)
+            ->leftJoin('atsauksme', 'dzivoklis_id', '=', 'dzivoklis.id')
+            ->leftJoin('iretajs', 'iretajs.id', '=', 'atsauksme.iretajs_id')
+            ->leftJoin('users', 'iretajs.email', '=', 'users.email')
+            ->get();
+        return view('apartment', ['apartment' => $apartment, 'reviews' => $reviews]);
     }
 }
