@@ -12,7 +12,6 @@ class ApartmentController extends Controller
         $apartments = Apartment::all();
         return view('home', ['apartments' => $apartments]);
     }
-
     public function apartment(int $id)
     {
         $apartment = Apartment::select('dzivoklis.city', 'street', 'floor', 'rooms', 'apartment_no', 'description', 'first_name', 'users.id as userID', 'phone', 'users.email')
@@ -20,6 +19,6 @@ class ApartmentController extends Controller
             ->leftJoin('iziretajs', 'iziretajs_id', '=', 'iziretajs.id')
             ->leftJoin('users', 'iziretajs.email', '=', 'users.email')
             ->first();
-        return view('apartment', ['apartment' => $apartment]);
+        return view('apartment', ['flat' => $apartment]);
     }
 }
